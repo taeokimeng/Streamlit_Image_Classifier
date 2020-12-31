@@ -2,6 +2,8 @@
 
 Streamlit Image Classifier tells you what the uploaded image is.
 
+![Example|635x380](https://github.com/taeokimeng/Streamlit_Image_Classifier/blob/master/ImageClassifier_Streamlit.gif)
+
 [Learn how to use Streamlit in your own project](https://www.streamlit.io/).
 
 ## Installation
