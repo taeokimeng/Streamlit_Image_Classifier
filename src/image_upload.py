@@ -1,6 +1,5 @@
 import streamlit as st
 from PIL import Image
-from src.resource import IMAGE_WIDTH
 
 def upload_image():
     uploaded_image = st.file_uploader("Please choose an image file", type=["png", "jpg", "jpeg"])
