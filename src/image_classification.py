@@ -60,6 +60,6 @@ def image_classifier(selected_model, loaded_image):
     # Retrieve the most likely result, e.g. highest probability
     decoded_label = label[0][0]
     # The result (prediction) from the classifier
-    st.write("%s: ''%s'' (%.2f%%)" % (selected_model, decoded_label[1], decoded_label[2]*100))
+    #st.write("%s: ''%s'' (%.2f%%)" % (selected_model, decoded_label[1], decoded_label[2]*100))
     # Return "Top 1 result" and "The probability"
     return decoded_label[1], float(decoded_label[2]*100)

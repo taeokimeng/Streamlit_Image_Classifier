@@ -11,7 +11,6 @@ def upload_image():
         except Exception: # Check invalid image
             st.error("Error: Invalid image")
         else:
-            st.image(image, caption=f"Uploaded image", width=IMAGE_WIDTH, use_column_width=False)
             return image
 
 
