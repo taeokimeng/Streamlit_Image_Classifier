@@ -27,10 +27,10 @@ You can improve it by sending pull requests to [this repository](https://github.
 We have several examples [on the website](https://docs.streamlit.io/en/stable/). Here is the first one to get you started:
 
 ```bash
-streamlit run app.py
+streamlit run streamlit_app.py
 ```
 
-This example will run "app.py".
+This example will run "streamlit_app.py".
 
 ## Contributing
 
