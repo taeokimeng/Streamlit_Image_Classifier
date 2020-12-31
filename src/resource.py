@@ -1,7 +1,7 @@
 APP_MODE = ("Classification", "Comparison")
 CLASSIFICATION_MODEL = ("VGG16", "ResNet50", "ResNet101V2", "Xception", "NASNetLarge")
 
-IMAGE_WIDTH = 168
+IMAGE_WIDTH = 192
 
 TARGET_SIZE_224 = (224, 224)
 TARGET_SIZE_299 = (299, 299)
