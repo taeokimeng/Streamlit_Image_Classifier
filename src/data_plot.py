@@ -6,5 +6,5 @@ def plot_bar(selected_model, probability, answer):
         x=selected_model, y=probability, text=answer, textposition='inside')])
     fig.update_layout(title="Classifiers Comparison",
                       xaxis_title="Model",
-                      yaxis_title="Responsibility")
+                      yaxis_title="Probability")
     st.write(fig)
