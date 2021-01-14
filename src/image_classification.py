@@ -1,5 +1,6 @@
 import numpy as np
 import streamlit as st
+import tensorflow as tf
 from keras.preprocessing import image
 from src.resource import CLASSIFICATION_MODEL, TARGET_SIZE_224, TARGET_SIZE_299, TARGET_SIZE_331
 
@@ -28,7 +29,22 @@ def nasnetlarge_classifier():
     from keras.applications.nasnet import NASNetLarge
     return NASNetLarge(), TARGET_SIZE_331
 
+@st.cache
 def image_classifier(selected_model, loaded_image):
+    # tf.debugging.set_log_device_placement(True)
+    # Below code is for "failed to create cublas handle: CUBLAS_STATUS_ALLOC_FAILED"
+    gpus = tf.config.experimental.list_physical_devices('GPU')
+    if gpus:
+        try:
+            # Currently, memory growth needs to be the same across GPUs
+            for gpu in gpus:
+                tf.config.experimental.set_memory_growth(gpu, True)
+            logical_gpus = tf.config.experimental.list_logical_devices('GPU')
+            print(len(gpus), "Physical GPUs,", len(logical_gpus), "Logical GPUs")
+        except RuntimeError as e:
+            # Memory growth must be set before GPUs have been initialized
+            print(e)
+
     # Which model did you choose?
     if selected_model == CLASSIFICATION_MODEL[0]: # VGG16
         from keras.applications.vgg16 import preprocess_input, decode_predictions
